@@ -15,14 +15,14 @@
         android:text="0%"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/progressBarLoading"
-        android:textColor="#fff"
+        android:textColor="#FFCA28"
         android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <ProgressBar
 
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:layout_alignParentBottom="true"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:id="@+id/progressBarLoading"
