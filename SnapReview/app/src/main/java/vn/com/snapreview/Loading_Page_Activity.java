@@ -18,16 +18,17 @@ public class Loading_Page_Activity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        progressBar=(ProgressBar) findViewById(R.id.progressBarLoading);
-        textView=(TextView) findViewById(R.id.textViewLoading);
+        progressBar = (ProgressBar) findViewById(R.id.progressBarLoading);
+        textView = (TextView) findViewById(R.id.textViewLoading);
 
         progressBar.setMax(100);
         progressBar.setScaleY(3f);
 
         progressAnimation();
     }
-    public void progressAnimation(){
-        ProgressBarAnimation anim=new ProgressBarAnimation(this, progressBar, textView, 0f, 100f);
+
+    public void progressAnimation() {
+        ProgressBarAnimation anim = new ProgressBarAnimation(this, progressBar, textView, 0f, 100f);
         anim.setDuration(8000);
         progressBar.setAnimation(anim);
     }
