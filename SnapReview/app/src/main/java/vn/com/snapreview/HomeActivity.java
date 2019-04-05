@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
-    //khai báo biến toàn cục
+    //Khai báo biến toàn cục
     ImageButton imgHomeCamera, imgHomeGallery;
     int REQUEST_CODE_CAMERA = 123;
 
@@ -22,7 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        //ánh xạ
+        //Ánh xạ
         imgHomeCamera = (ImageButton) findViewById(R.id.imageButtonCamera);
         imgHomeGallery = (ImageButton) findViewById(R.id.imageButtonGallery);
 
