@@ -8,12 +8,15 @@
 
     //Layout chụp ảnh
     <LinearLayout
+        android:background="#F8F2DA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="4"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="5">
 
         <TextView
+            android:layout_marginBottom="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -29,82 +32,94 @@
             android:weightSum="10">
 
             <ImageButton
+                android:layout_marginBottom="24dp"
                 android:id="@+id/imageButtonReviewCamera"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:background="@null"
-                android:src="@drawable/review_camera" />
+                android:src="@drawable/review_camera_icon" />
 
             <ImageView
                 android:id="@+id/imageViewReviewPicture"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="6"
+                android:layout_weight="4"
                 android:src="@drawable/hinh_anh_review" />
 
             <ImageButton
+                android:layout_marginBottom="24dp"
                 android:id="@+id/imageButtonReviewFolder"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:background="@null"
-                android:src="@drawable/review_folder" />
+                android:src="@drawable/review_folder_icon" />
         </LinearLayout>
     </LinearLayout>
 
     //Layout Đánh giá sản phẩm
+
+    <ScrollView
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
     <LinearLayout
+
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:orientation="vertical"
-        android:weightSum="16">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:textColor="#fcfcfc"
+            android:background="#1B1B1B"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_marginTop="8dp"
-            android:layout_weight="1"
             android:text="Đánh Giá Sản Phẩm"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         //Tên sản phẩm
         <LinearLayout
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="10">
-
+            android:weightSum="5">
             <TextView
+                android:gravity="center_vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2.5"
+                android:layout_weight="1.5"
                 android:text="Tên sản phẩm:" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7.5" />
+                android:layout_weight="3.5"
+                android:hint="Nhập tên sản phẩm" />
         </LinearLayout>
 
         //Thương hiệu
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="10">
 
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
             <TextView
+                android:gravity="center_vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2.5"
+                android:layout_weight="1.5"
                 android:text="Thương hiêu:" />
 
             //chưa xong thương hiệu
@@ -112,47 +127,78 @@
         </LinearLayout>
 
         //Thời gian sử dụng
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="10">
 
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
             <TextView
+                android:gravity="center_vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="1.5"
                 android:text="Thời gian sử dụng:" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="3.5"
+                android:hint="Nhập thời gian sử dụng(năm)"
                 android:inputType="numberDecimal" />
         </LinearLayout>
 
+
         //Đánh giá thiết kế
         <LinearLayout
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="2">
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Thiết kê" />
+                android:text="Thiết kế" />
+            <RadioGroup
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="4">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Xuất sắc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tốt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Bình thường"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tệ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
         </LinearLayout>
 
         //Đánh giá cấu hình
         <LinearLayout
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="2">
 
@@ -162,13 +208,41 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="Cấu hình" />
+            <RadioGroup
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="4">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Xuất sắc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tốt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Bình thường"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tệ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
         </LinearLayout>
 
         //Đánh giá Camera
         <LinearLayout
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="2">
 
@@ -178,13 +252,42 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="Camera" />
+
+            <RadioGroup
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="4">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Xuất sắc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tốt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Bình thường"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tệ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
         </LinearLayout>
 
         //Đánh giá Âm thanh
         <LinearLayout
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="2">
 
@@ -194,13 +297,41 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="Âm thanh" />
+            <RadioGroup
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="4">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Xuất sắc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tốt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Bình thường"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tệ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
         </LinearLayout>
 
         //Đánh giá Thời lượng pin
         <LinearLayout
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="2">
 
@@ -210,13 +341,39 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="Thời lượng pin" />
+            <RadioGroup
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="4">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Xuất sắc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tốt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Bình thường"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="Tệ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
         </LinearLayout>
-
         //Xác thực thông tin
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="3">
 
@@ -238,6 +395,9 @@
                 android:layout_weight="1"
                 android:text="Thoát" />
         </LinearLayout>
+
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
