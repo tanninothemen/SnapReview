@@ -25,6 +25,7 @@ public class Loading_Page_Activity extends AppCompatActivity {
         progressBar.setScaleY(3f);
 
         progressAnimation();
+
     }
 
     public void progressAnimation() {

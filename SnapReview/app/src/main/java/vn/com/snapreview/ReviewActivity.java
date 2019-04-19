@@ -12,9 +12,12 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import java.io.FileNotFoundException;
@@ -25,6 +28,7 @@ public class ReviewActivity extends AppCompatActivity {
     ImageButton ibtnReviewCamera;
     ImageButton ibtnReviewFolder;
     ImageView imgReviewPicture;
+    Button btnReviewThuongHieu;
     final int REQUEST_CODE_CAMERA = 123;
     final int REQUEST_CODE_FOLDER = 456;
 
@@ -60,6 +64,14 @@ public class ReviewActivity extends AppCompatActivity {
                         REQUEST_CODE_FOLDER);
             }
         });
+
+        //Tạo phần chọn menu thương hiệu
+        btnReviewThuongHieu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShowMenuThuongHieu();
+            }
+        });
     }
 
     //Hàm ánh xạ
@@ -67,6 +79,7 @@ public class ReviewActivity extends AppCompatActivity {
         ibtnReviewCamera = (ImageButton) findViewById(R.id.imageButtonReviewCamera);
         ibtnReviewFolder = (ImageButton) findViewById(R.id.imageButtonReviewFolder);
         imgReviewPicture = (ImageView) findViewById(R.id.imageViewReviewPicture);
+        btnReviewThuongHieu=(Button) findViewById(R.id.buttonReviewThuongHieu);
     }
 
     //Hàm xin quyền truy cập máy ảnh và thư mục của thiết bị
@@ -114,5 +127,51 @@ public class ReviewActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    //Hàm hiển thị menu thương hiệu
+    private void ShowMenuThuongHieu(){
+        PopupMenu popupMenuThuongHieu=new PopupMenu(this, btnReviewThuongHieu);
+        popupMenuThuongHieu.getMenuInflater().inflate(R.menu.menu_review_thuonghieu,popupMenuThuongHieu.getMenu());
+        popupMenuThuongHieu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.menuReviewThuongHieuApple:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuSamsung:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuHuawei:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuLenovo:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuLG:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuNokia:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuOppo:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuSony:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuVivo:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                    case R.id.menuReviewThuongHieuXiaomi:
+                        btnReviewThuongHieu.setText(item.getTitle().toString());
+                        break;
+                }
+                return false;
+            }
+        });
+        popupMenuThuongHieu.show();
     }
 }

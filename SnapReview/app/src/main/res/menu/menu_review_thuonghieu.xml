@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Apple"
+        android:id="@+id/menuReviewThuongHieuApple"
+        />
+    <item android:title="Samsung"
+        android:id="@+id/menuReviewThuongHieuSamsung"
+        />
+    <item android:title="LG"
+        android:id="@+id/menuReviewThuongHieuLG"
+        />
+    <item android:title="Huawei"
+        android:id="@+id/menuReviewThuongHieuHuawei"
+        />
+    <item android:title="Oppo"
+        android:id="@+id/menuReviewThuongHieuOppo"
+        />
+    <item android:title="Xiaomi"
+        android:id="@+id/menuReviewThuongHieuXiaomi"
+        />
+    <item android:title="Sony"
+        android:id="@+id/menuReviewThuongHieuSony"
+        />
+    <item android:title="Lenovo"
+        android:id="@+id/menuReviewThuongHieuLenovo"
+        />
+    <item android:title="Nokia"
+        android:id="@+id/menuReviewThuongHieuNokia"
+        />
+    <item android:title="Vivo"
+        android:id="@+id/menuReviewThuongHieuVivo"
+        />
+</menu>
