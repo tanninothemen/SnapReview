@@ -152,14 +152,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:gravity="center_vertical"
-                    android:text="Thời gian sử dụng:" />
+                    android:text="Thời gian trải nghiêm:" />
 
                 <EditText
                     style="@style/Widget.AppCompat.EditText"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3.5"
-                    android:hint="Nhập thời gian sử dụng(năm)"
+                    android:hint="Nhập thời gian sử dụng (năm)"
                     android:inputType="numberDecimal" />
             </LinearLayout>
 
