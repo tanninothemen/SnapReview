@@ -25,10 +25,9 @@ import java.io.InputStream;
 
 public class ReviewActivity extends AppCompatActivity {
     //Khai báo biến toàn cục, mã yêu cầu camera
-    ImageButton ibtnReviewCamera;
-    ImageButton ibtnReviewFolder;
+    ImageButton ibtnReviewCamera,ibtnReviewFolder;
     ImageView imgReviewPicture;
-    Button btnReviewThuongHieu;
+    Button btnReviewThuongHieu,btnReviewThoiGianSuDung;
     final int REQUEST_CODE_CAMERA = 123;
     final int REQUEST_CODE_FOLDER = 456;
 
@@ -72,6 +71,13 @@ public class ReviewActivity extends AppCompatActivity {
                 ShowMenuThuongHieu();
             }
         });
+        //Tạo phần chọn menu thời gian sử dụng
+        btnReviewThoiGianSuDung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShowMenuThoiGianSuDung();
+            }
+        });
     }
 
     //Hàm ánh xạ
@@ -80,6 +86,7 @@ public class ReviewActivity extends AppCompatActivity {
         ibtnReviewFolder = (ImageButton) findViewById(R.id.imageButtonReviewFolder);
         imgReviewPicture = (ImageView) findViewById(R.id.imageViewReviewPicture);
         btnReviewThuongHieu=(Button) findViewById(R.id.buttonReviewThuongHieu);
+        btnReviewThoiGianSuDung=(Button) findViewById(R.id.buttonReviewThoiGianDung);
     }
 
     //Hàm xin quyền truy cập máy ảnh và thư mục của thiết bị
@@ -173,5 +180,38 @@ public class ReviewActivity extends AppCompatActivity {
             }
         });
         popupMenuThuongHieu.show();
+    }
+
+
+    //Hàm hiển thị menu thời gian sử dụng
+    private void ShowMenuThoiGianSuDung(){
+
+        PopupMenu popupMenuThoiGianSuDung= new PopupMenu(this,btnReviewThoiGianSuDung);
+        popupMenuThoiGianSuDung.getMenuInflater().inflate(R.menu.menu_review_usedtime,popupMenuThoiGianSuDung.getMenu());
+        popupMenuThoiGianSuDung.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.menuTime1Month:
+                        btnReviewThoiGianSuDung.setText(item.getTitle().toString());
+                        break;
+                    case  R.id.menuTime1To3Month:
+                        btnReviewThoiGianSuDung.setText(item.getTitle().toString());
+                        break;
+                    case  R.id.menuTime3To6Month:
+                        btnReviewThoiGianSuDung.setText(item.getTitle().toString());
+                        break;
+                    case  R.id.menuTime6MonthTo1Year:
+                        btnReviewThoiGianSuDung.setText(item.getTitle().toString());
+                        break;
+                    case  R.id.menuTimeOver1Year:
+                        btnReviewThoiGianSuDung.setText(item.getTitle().toString());
+                        break;
+
+                }
+                return false;
+            }
+        });
+        popupMenuThoiGianSuDung.show();
     }
 }
