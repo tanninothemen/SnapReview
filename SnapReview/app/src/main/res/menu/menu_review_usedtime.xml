@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="1 tháng"
+        android:id="@+id/menuTime1Month"
+        />
+    <item android:title="1-3 tháng"
+        android:id="@+id/menuTime1To3Month"
+        />
+    <item android:title="3-6 tháng"
+        android:id="@+id/menuTime3To6Month"
+        />
+    <item android:title="6 tháng - 1 năm"
+        android:id="@+id/menuTime6MonthTo1Year"
+        />
+    <item android:title="Hơn 1 năm"
+        android:id="@+id/menuTimeOver1Year"
+        />
+</menu>
