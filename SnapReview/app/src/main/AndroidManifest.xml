@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ReviewActivity"></activity>
         <activity android:name=".HomeActivity" />
-        <activity android:name=".Loading_Page_Activity">
+        <activity android:name=".LoadingPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

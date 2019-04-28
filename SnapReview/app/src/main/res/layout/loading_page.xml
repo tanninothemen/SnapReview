@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/loading"
     android:padding="16dp"
-    tools:context=".Loading_Page_Activity">
+    tools:context=".LoadingPageActivity">
 
     <TextView
-
-        android:id="@+id/textViewLoading"
+        android:id="@+id/textViewTimeLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/progressBarLoading"
+        android:layout_above="@id/progressBarLoadingApp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
         android:text="0%"
@@ -21,12 +20,13 @@
         android:textSize="24sp" />
 
     <ProgressBar
-
-        android:id="@+id/progressBarLoading"
+        android:id="@+id/progressBarLoadingApp"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="32dp"
+        android:max="100"
+        android:progress="0" />
 
 </RelativeLayout>
