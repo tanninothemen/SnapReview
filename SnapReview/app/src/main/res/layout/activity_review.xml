@@ -189,24 +189,28 @@
                     android:weightSum="4">
 
                     <RadioButton
+                        android:id="@+id/radioButtonTKXuatSac"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Xuất sắc" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonTKTot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tốt" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonTKBinhThuong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Bình thường" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonTKTe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -240,24 +244,28 @@
                     android:weightSum="4">
 
                     <RadioButton
+                        android:id="@+id/radioButtonCHXuatSac"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Xuất sắc" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonCHTot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tốt" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonCHBinhThuong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Bình thường" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonCHTe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -290,24 +298,28 @@
                     android:weightSum="4">
 
                     <RadioButton
+                        android:id="@+id/radioButtonCamXuatSac"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Xuất sắc" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonCamTot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tốt" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonCamBinhThuong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Bình thường" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonCamTe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -340,24 +352,28 @@
                     android:weightSum="4">
 
                     <RadioButton
+                        android:id="@+id/radioButtonSoundXuatSac"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Xuất sắc" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonSoundTot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tốt" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonSoundBinhThuong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Bình thường" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonSoundTe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -390,24 +406,28 @@
                     android:weightSum="4">
 
                     <RadioButton
+                        android:id="@+id/radioButtonBatteryXuatSac"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Xuất sắc" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonBatteryTot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tốt" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonBatteryBinhThuong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Bình thường" />
 
                     <RadioButton
+                        android:id="@+id/radioButtonBatteryTe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -423,18 +443,21 @@
                 android:weightSum="3">
 
                 <Button
+                    android:id="@+id/buttonXacNhan"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Xác nhận" />
 
                 <Button
+                    android:id="@+id/buttonHuy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Hủy" />
 
                 <Button
+                    android:id="@+id/buttonThoat"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
